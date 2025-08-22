@@ -1,5 +1,5 @@
 "use client";
-import AdvanceSection from "@/components/about/advance-section";
+import AdvanceSection from "@/components/About/advance-section";
 import Image from "next/image";
 
 export default function About() {

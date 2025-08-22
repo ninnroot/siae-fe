@@ -62,6 +62,18 @@ export default function MerchandisePage() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
+  const handleSizeSelect = (size: string) => {
+    const sizeIndex = itemSizes.indexOf(size);
+    setItemSize(sizeIndex);
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent, size: string) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handleSizeSelect(size);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -97,37 +109,48 @@ export default function MerchandisePage() {
             <DialogTitle>Delivery Informations</DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
-            <label className="block text-sm font-medium my-2">
-              Choose Item Size
-            </label>
-            <div className="flex gap-3">
-              {itemSizes.map((size, index) => (
-                <div
-                  onClick={() => setItemSize(index)}
-                  className={`border rounded-xl px-5 py-4 cursor-pointer ${
-                    itemSize === index
-                      ? " border-orange-400"
-                      : "border-gray-300"
-                  }`}
-                  key={index}
-                >
-                  {size}
-                </div>
-              ))}
-            </div>
+            <fieldset>
+              <legend className="block text-sm font-medium my-2">
+                Choose Item Size
+              </legend>
+              <div className="flex gap-3">
+                {itemSizes.map((size) => (
+                  <button
+                    type="button"
+                    onClick={() => handleSizeSelect(size)}
+                    onKeyDown={(e) => handleKeyDown(e, size)}
+                    className={`border rounded-xl px-5 py-4 cursor-pointer ${
+                      itemSize === itemSizes.indexOf(size)
+                        ? " border-orange-400"
+                        : "border-gray-300"
+                    }`}
+                    key={size}
+                    aria-pressed={itemSize === itemSizes.indexOf(size)}
+                  >
+                    {size}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
           </div>
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium mb-1">Name</label>
+              <label htmlFor="name" className="block text-sm font-medium mb-1">
+                Name
+              </label>
               <Input
+                id="name"
                 value={formData.name}
                 onChange={(e) => handleInputChange("name", e.target.value)}
                 placeholder="Enter your name"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1">Email</label>
+              <label htmlFor="email" className="block text-sm font-medium mb-1">
+                Email
+              </label>
               <Input
+                id="email"
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
@@ -135,20 +158,25 @@ export default function MerchandisePage() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label htmlFor="phone" className="block text-sm font-medium mb-1">
                 Phone Number
               </label>
               <Input
+                id="phone"
                 value={formData.phone}
                 onChange={(e) => handleInputChange("phone", e.target.value)}
                 placeholder="Enter your phone number"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1">
+              <label
+                htmlFor="address"
+                className="block text-sm font-medium mb-1"
+              >
                 Delivery Address
               </label>
               <Textarea
+                id="address"
                 value={formData.address}
                 onChange={(e) => handleInputChange("address", e.target.value)}
                 placeholder="Enter your delivery address"
@@ -169,14 +197,22 @@ export default function MerchandisePage() {
       <AlertDialog open={showSuccessAlert} onOpenChange={setShowSuccessAlert}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle className="text-center">Order Successful!</AlertDialogTitle>
+            <AlertDialogTitle className="text-center">
+              Order Successful!
+            </AlertDialogTitle>
             <AlertDialogDescription className="text-center">
-              We’ve received your order and sent a confirmation email to
-              <b className="underline text-blue-900"> { formData.email || "example@gmail.com"}</b>
+              We've received your order and sent a confirmation email to
+              <b className="underline text-blue-900">
+                {" "}
+                {formData.email || "example@gmail.com"}
+              </b>
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter >
-            <AlertDialogAction className="mx-auto  bg-blue-900 hover:bg-blue-800 text-white" onClick={() => setShowSuccessAlert(false)}>
+          <AlertDialogFooter>
+            <AlertDialogAction
+              className="mx-auto  bg-blue-900 hover:bg-blue-800 text-white"
+              onClick={() => setShowSuccessAlert(false)}
+            >
               Continue Shopping
             </AlertDialogAction>
           </AlertDialogFooter>

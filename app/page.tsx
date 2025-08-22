@@ -1,9 +1,4 @@
 "use client";
-import { Footer } from "@/components/footer";
-
-import About from "@/components/About/about-page";
-import MerchandisePage from "@/components/MerchStore/merch-store-page";
-
 import {
   HeroSection,
   WelcomeSection,

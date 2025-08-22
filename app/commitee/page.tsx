@@ -1,4 +1,4 @@
-import CommitteePage from "@/components/About/about-page";
+import CommitteePage from "@/components/About/commitee";
 
 export default function AboutPage() {
   return (
