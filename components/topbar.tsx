@@ -70,19 +70,13 @@ export function Topbar() {
                     href="/about"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Our Mission
+                    About SIAE
                   </Link>
                   <Link
-                    href="/about"
+                    href="/commitee"
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
-                    Leadership
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    History
+                    Our Team
                   </Link>
                 </div>
               )}

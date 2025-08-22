@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -95,25 +96,30 @@ const technicalCouncil: CommitteeMember[] = [
   {
     name: "Prof Low Kin Huat",
     title: "Civil Aviation University of China, GUTMA, F.SIAE",
-    description: "Accomplished scientist and engineering research lead in NTU with more than 30 years of experience in robotics, mechatronics, drones, vibrations, mechanics and dynamics, machine and mechanism designs. Top 2% scientist in the world by Stanford University, 2022. Nominated as one of the first two Honorary Members of GUTMA (Global UTM Association, Switzerland) 2017. ",
+    description:
+      "Accomplished scientist and engineering research lead in NTU with more than 30 years of experience in robotics, mechatronics, drones, vibrations, mechanics and dynamics, machine and mechanism designs. Top 2% scientist in the world by Stanford University, 2022. Nominated as one of the first two Honorary Members of GUTMA (Global UTM Association, Switzerland) 2017. ",
     image: "/about-members/Prof Low Kin Huat.jpg",
   },
   {
     name: "Dr Hamid Saeedipour",
     title: "Principal Lecturer (Industry) Republic Polytechnic",
-    description: "Over 25 years of experience in aerospace engineering design, smart MRO systems, and composite structure repair. He has held key roles in the UK, Iran, Malaysia, and Singapore, including associate dean, deputy director, and aircraft designer. Hamid has received multiple awards, including the JEC Group’s Most Innovative Project Award (2015) and the IPS Crescendas Medal (2017).",
+    description:
+      "Over 25 years of experience in aerospace engineering design, smart MRO systems, and composite structure repair. He has held key roles in the UK, Iran, Malaysia, and Singapore, including associate dean, deputy director, and aircraft designer. Hamid has received multiple awards, including the JEC Group’s Most Innovative Project Award (2015) and the IPS Crescendas Medal (2017).",
     image: "/about-members/Dr Hamid Saeedipour.jpg",
   },
   {
     name: "Dr Neo Kok Beng",
     title: "Founder and CEO, Neo Aeronautics",
-    description: "Award-winning engineer, educator & entrepreneur specialized in technological innovations and commercialisation. Amongst his accolades include the Presidents’ Design Award, Prime Minister Community Service Award, USA Veterans’ Affairs Innovation Initiative Award, Global Entrepreneurship Winner, Harvard Kennedy School Service Award & NUS Innovation & Enterprise Awards. ",
+    description:
+      "Award-winning engineer, educator & entrepreneur specialized in technological innovations and commercialisation. Amongst his accolades include the Presidents’ Design Award, Prime Minister Community Service Award, USA Veterans’ Affairs Innovation Initiative Award, Global Entrepreneurship Winner, Harvard Kennedy School Service Award & NUS Innovation & Enterprise Awards. ",
     image: "/about-members/Dr Neo Kok Beng.jpg",
   },
   {
     name: "Mr. Liu Wing Tim",
-    title: "Mechanical-Automation Engineer (Germany), Aeronautical-Helicopter Engineer (France), MBA (UK)",
-    description: "Former head of aerodynamics branch at ALD, HQ-RSAF responsible for flight testing and store certification programs. Senior management in manufacturing technology and capital projects in Dairies Division, F&N Limited. Managing Director of ATTC, a SAR Part 147 MTO and National CET Institute for Aerospace WSQ, from 2013 to 2015. Adjunct lecturer at NTU, Adjunct lecturer at SIT-University of Glasgow, 2018 to 2024.",
+    title:
+      "Mechanical-Automation Engineer (Germany), Aeronautical-Helicopter Engineer (France), MBA (UK)",
+    description:
+      "Former head of aerodynamics branch at ALD, HQ-RSAF responsible for flight testing and store certification programs. Senior management in manufacturing technology and capital projects in Dairies Division, F&N Limited. Managing Director of ATTC, a SAR Part 147 MTO and National CET Institute for Aerospace WSQ, from 2013 to 2015. Adjunct lecturer at NTU, Adjunct lecturer at SIT-University of Glasgow, 2018 to 2024.",
     image: "/about-members/Mr. Liu Wing Tim.jpg",
   },
 ];
