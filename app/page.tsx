@@ -1,5 +1,4 @@
 "use client";
-import { Topbar } from "@/components/topbar";
 import { Footer } from "@/components/footer";
 import {
   HeroSection,
@@ -14,7 +13,6 @@ import {
 export default function Home() {
   return (
     <div className="font-sans min-h-screen">
-      <Topbar />
       <HeroSection />
       <WelcomeSection />
       <LeadershipSection />
@@ -22,7 +20,6 @@ export default function Home() {
       <EventsSection />
       <BlogSection />
       <CorporateMembersSection />
-      <Footer />
     </div>
   );
 }
