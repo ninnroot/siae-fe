@@ -24,7 +24,6 @@ export function Footer() {
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <Image src="/siae-logo.png" alt="Logo" width={400} height={200} />
-
             </div>
 
             {/* Contact Information */}
@@ -37,8 +36,10 @@ export function Footer() {
               <div className="flex items-start space-x-3 text-gray-700">
                 <MapPin className="h-5 w-5 text-blue-900 mt-0.5 flex-shrink-0" />
                 <span className="text-sm leading-relaxed">
-                  60 Paya Lebar Road #07-54<br />
-                  Paya Lebar Square<br />
+                  60 Paya Lebar Road #07-54
+                  <br />
+                  Paya Lebar Square
+                  <br />
                   Singapore 409051
                 </span>
               </div>
@@ -51,7 +52,12 @@ export function Footer() {
                   {/* QR Code Placeholder */}
                   <div className="w-20 h-20 bg-white border-2 border-gray-300 rounded-lg flex items-center justify-center">
                     <div className="w-16 h-16 bg-black rounded-lg flex items-center justify-center">
-                      <Image src="/insta-qr.png" alt="Instagram QR Code" width={100} height={100} />
+                      <Image
+                        src="/insta-qr.png"
+                        alt="Instagram QR Code"
+                        width={100}
+                        height={100}
+                      />
                     </div>
                   </div>
                 </div>
@@ -60,10 +66,10 @@ export function Footer() {
                   <p>
                     Follow SIAE on{" "}
                     <a
-                      href="#"
+                      href="/"
                       className="text-blue-600 hover:text-blue-800 font-medium underline"
                     >
-                      linked in
+                      LinkedIn
                     </a>{" "}
                     or scan QR code with your device
                   </p>
@@ -79,7 +85,8 @@ export function Footer() {
                 Join our mailing list
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Be the first to know about our updates, events and exclusive offers.
+                Be the first to know about our updates, events and exclusive
+                offers.
               </p>
             </div>
 
@@ -107,7 +114,10 @@ export function Footer() {
         {/* Bottom Border */}
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="text-center text-gray-500 text-sm">
-            <p>&copy; 2025 Singapore Institute of Aerospace Engineers. All rights reserved.</p>
+            <p>
+              &copy; 2025 Singapore Institute of Aerospace Engineers. All rights
+              reserved.
+            </p>
           </div>
         </div>
       </div>
