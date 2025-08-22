@@ -1,8 +1,8 @@
 "use client";
-import AboutSiae from "@/components/About/about-siae";
-import AdvanceSection from "@/components/About/advance-section";
-import SeminarSection from "@/components/About/seminar";
-import SIAEIPage from "@/components/About/siaei";
+import AboutSiae from "@/components/about/about-siae";
+import AdvanceSection from "@/components/about/advance-section";
+import SeminarSection from "@/components/about/seminar";
+import SIAEIPage from "@/components/about/siaei";
 import Image from "next/image";
 
 export default function About() {
