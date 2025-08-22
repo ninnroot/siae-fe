@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noArrayIndexKey: <explanation> */
 import React from "react";
 
 type TeamMemberProps = {
@@ -8,15 +9,17 @@ type TeamMemberProps = {
   company?: string;
 };
 
-type CouncilMemberProps ={
-    img : string;
-    name : string ;
-    position : string;
-    textContent: string;
-}
+type CouncilMemberProps = {
+  img: string;
+  name: string;
+  position: string;
+  textContent: string;
+};
 
 function TeamMember({ img, name, role, position, company }: TeamMemberProps) {
-    {/*for SIAE executive committe*/}
+  {
+    /*for SIAE executive committe*/
+  }
   return (
     <div className="flex flex-col items-center text-center mb-6">
       <img
@@ -31,7 +34,6 @@ function TeamMember({ img, name, role, position, company }: TeamMemberProps) {
     </div>
   );
 }
-
 
 function Council({ img, name, position, textContent }: CouncilMemberProps) {
   return (
@@ -59,7 +61,9 @@ function Council({ img, name, position, textContent }: CouncilMemberProps) {
         />
 
         <div className="absolute bottom-0 left-0 bg-black bg-opacity-30 p-2">
-          <p className="text-sm font-semibold text-white drop-shadow-md">{name}</p>
+          <p className="text-sm font-semibold text-white drop-shadow-md">
+            {name}
+          </p>
         </div>
 
         <div className="absolute inset-0 bg-black bg-opacity-70 text-white opacity-0 group-hover:opacity-60 transition-opacity duration-300 p-4 flex flex-col justify-center">
@@ -71,7 +75,6 @@ function Council({ img, name, position, textContent }: CouncilMemberProps) {
     </div>
   );
 }
-
 
 function OurTeam() {
   const teamSections: TeamMemberProps[][] = [
@@ -158,82 +161,91 @@ function OurTeam() {
       },
     ],
   ];
-  const councilSections : CouncilMemberProps [][] =[
-     [
-       {
-        img : "/TeamMember/Council/Peter_Kuok.jpg",
-        name : "Prof Peter Kuok SH",
-        position : "Civil Service College,Kuok Group",
-        textContent : "More than 40 years of working experience in Senior Managerial Positions in both private and public sectors; Government Agencies and Singapore Government Holding Companies. Prior to working in the public sector, he worked at his family business in Properties Development and Housing Development; Hospitality and Tourism business Healthcare Services, Supermarket, Retail Facilities and as Director Singapore Bus Services"
-    },
-    {
-        img : "/TeamMember/Council/Low_Kin_Huat.jpg",
-        name : "PROF LOW KIN HUAT",
-        position : "Civil Aviation University of China,GUTMA, F.SIAE",
-        textContent : "Accomplished scientist and engineering research lead in NTU with more than 30 years of experience in robotics, mechatronics, drones, vibrations, mechanics and dynamics, machine and mechanism designs. Top 2% scientist in the world by Stanford University, 2022. Nominated as one of the first two Honorary Members of GUTMA (Global UTM Association, Switzerland) 2017. "
-    },
-    {
-        img : "/TeamMember/Council/Hamid_Saeedipour.jpg",
-        name : "DR HAMID SAEEDIPOUR",
-        position : "Principal Lecturer (Industry) Republic Polytechnic",
-        textContent : "Over 25 years of experience in aerospace engineering design, smart MRO systems, and composite structure repair. He has held key roles in the UK, Iran, Malaysia, and Singapore, including associate dean, deputy director, and aircraft designer. Hamid has received multiple awards, including the JEC Group’s Most Innovative Project Award (2015) and the IPS Crescendas Medal (2017)."
-    },
-
-  ],
-  [
- {
-        img : "/TeamMember/Council/Neo_Kok_Beng.jpg",
-        name : "DR NEO KOK BENG",
-        position : "Founder and CEO,Neo Aeronautics ",
-        textContent : "Award-winning engineer, educator & entrepreneur specialized in technological innovations and commercialisation. Amongst his accolades include the Presidents’ Design Award, Prime Minister Community Service Award, USA Veterans’ Affairs Innovation Initiative Award, Global Entrepreneurship Winner, Harvard Kennedy School Service Award & NUS Innovation & Enterprise Awards. "
-    },
-    {
-        img : "/TeamMember/Council/Liu_Wing_Tim.jpg",
-        name : "MR. LIU WING TIM",
-        position : "Mechanical-Automation Engineer (Germany), Aeronautical-Helicopter Engineer (France), MBA (UK)",
-        textContent : "Former head of aerodynamics branch at ALD, HQ-RSAF responsible for flight testing and store certification programs. Senior management in manufacturing technology and capital projects in Dairies Division, F&N Limited. Managing Director of ATTC, a SAR Part 147 MTO and National CET Institute for Aerospace WSQ, from 2013 to 2015. Adjunct lecturer at NTU, Adjunct lecturer at SIT-University of Glasgow, 2018 to 2024."
-    },
-  ]
-]
+  const councilSections: CouncilMemberProps[][] = [
+    [
+      {
+        img: "/TeamMember/Council/Peter_Kuok.jpg",
+        name: "Prof Peter Kuok SH",
+        position: "Civil Service College,Kuok Group",
+        textContent:
+          "More than 40 years of working experience in Senior Managerial Positions in both private and public sectors; Government Agencies and Singapore Government Holding Companies. Prior to working in the public sector, he worked at his family business in Properties Development and Housing Development; Hospitality and Tourism business Healthcare Services, Supermarket, Retail Facilities and as Director Singapore Bus Services",
+      },
+      {
+        img: "/TeamMember/Council/Low_Kin_Huat.jpg",
+        name: "PROF LOW KIN HUAT",
+        position: "Civil Aviation University of China,GUTMA, F.SIAE",
+        textContent:
+          "Accomplished scientist and engineering research lead in NTU with more than 30 years of experience in robotics, mechatronics, drones, vibrations, mechanics and dynamics, machine and mechanism designs. Top 2% scientist in the world by Stanford University, 2022. Nominated as one of the first two Honorary Members of GUTMA (Global UTM Association, Switzerland) 2017. ",
+      },
+      {
+        img: "/TeamMember/Council/Hamid_Saeedipour.jpg",
+        name: "DR HAMID SAEEDIPOUR",
+        position: "Principal Lecturer (Industry) Republic Polytechnic",
+        textContent:
+          "Over 25 years of experience in aerospace engineering design, smart MRO systems, and composite structure repair. He has held key roles in the UK, Iran, Malaysia, and Singapore, including associate dean, deputy director, and aircraft designer. Hamid has received multiple awards, including the JEC Group’s Most Innovative Project Award (2015) and the IPS Crescendas Medal (2017).",
+      },
+    ],
+    [
+      {
+        img: "/TeamMember/Council/Neo_Kok_Beng.jpg",
+        name: "DR NEO KOK BENG",
+        position: "Founder and CEO,Neo Aeronautics ",
+        textContent:
+          "Award-winning engineer, educator & entrepreneur specialized in technological innovations and commercialisation. Amongst his accolades include the Presidents’ Design Award, Prime Minister Community Service Award, USA Veterans’ Affairs Innovation Initiative Award, Global Entrepreneurship Winner, Harvard Kennedy School Service Award & NUS Innovation & Enterprise Awards. ",
+      },
+      {
+        img: "/TeamMember/Council/Liu_Wing_Tim.jpg",
+        name: "MR. LIU WING TIM",
+        position:
+          "Mechanical-Automation Engineer (Germany), Aeronautical-Helicopter Engineer (France), MBA (UK)",
+        textContent:
+          "Former head of aerodynamics branch at ALD, HQ-RSAF responsible for flight testing and store certification programs. Senior management in manufacturing technology and capital projects in Dairies Division, F&N Limited. Managing Director of ATTC, a SAR Part 147 MTO and National CET Institute for Aerospace WSQ, from 2013 to 2015. Adjunct lecturer at NTU, Adjunct lecturer at SIT-University of Glasgow, 2018 to 2024.",
+      },
+    ],
+  ];
 
   return (
     <div>
       {/*Top Bar*/}
       <div className="text-center mt-1.5">
         <p className="text-xs font-extralight mb-2">2023-2025</p>
-        <h2 className="text-2xl text-[#090056] font-bold mb-6">SIAE Executive Committee</h2>
+        <h2 className="text-2xl text-[#090056] font-bold mb-6">
+          SIAE Executive Committee
+        </h2>
       </div>
       {/*SIAE Executive Committe*/}
       <div className="flex flex-col space-y-10">
-        {teamSections.map((section, i) => (
+        {teamSections.map((section, sectionIndex) => (
           <div
-            key={i}
+            key={`team-section-${sectionIndex}`}
             className="flex flex-col md:flex-row md:justify-center md:gap-11"
           >
-            {section.map((member, j) => (
-              <TeamMember key={j} {...member} />
+            {section.map((member, memberIndex) => (
+              <TeamMember key={`${member.name}-${memberIndex}`} {...member} />
             ))}
           </div>
         ))}
       </div>
 
       {/*Council Text */}
-         <div className="text-center mt-4">
-
-        <h2 className="text-4xl text-[#090056] font-bold mb-6">Techincal Competency Council</h2>
+      <div className="text-center mt-4">
+        <h2 className="text-4xl text-[#090056] font-bold mb-6">
+          Techincal Competency Council
+        </h2>
       </div>
-         {/*Council*/}
-            <div className="flex flex-col space-y-6" >
-            {councilSections.map((section, i) => (
-                <div key={i} className="flex flex-col md:flex-row md:gap-6 justify-center items-center">
-                {section.map((member, j) => (
-                    <Council key={j} {...member} />
-                ))}
-                </div>
+      {/*Council*/}
+      <div className="flex flex-col space-y-6">
+        {councilSections.map((section, i) => (
+          <div
+            key={`council-section-${i}`}
+            className="flex flex-col md:flex-row md:gap-6 justify-center items-center"
+          >
+            {section.map((member, j) => (
+              <Council key={`${member.name}-${j}`} {...member} />
             ))}
-            </div>
-
-      
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
