@@ -1,15 +1,24 @@
-import Coporate from "@/components/Coporate";
-import Header from "@/components/Header";
-import Membership from "@/components/Membership";
-import Image from "next/image";
+"use client";
+import {
+  HeroSection,
+  WelcomeSection,
+  LeadershipSection,
+  ValuesSection,
+  EventsSection,
+  BlogSection,
+  CorporateMembersSection,
+} from "@/components/home";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <Membership />
-      <Coporate/>
-      <div className='w-full h-[1px] bg-[#e2e2e3] mb-16'></div>
+    <div className="font-sans min-h-screen">
+      <HeroSection />
+      <WelcomeSection />
+      <LeadershipSection />
+      <ValuesSection />
+      <EventsSection />
+      <BlogSection />
+      <CorporateMembersSection />
     </div>
   );
 }
