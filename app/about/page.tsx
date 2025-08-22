@@ -1,5 +1,8 @@
 "use client";
+import AboutSiae from "@/components/About/about-siae";
 import AdvanceSection from "@/components/About/advance-section";
+import SeminarSection from "@/components/About/seminar";
+import SIAEIPage from "@/components/About/siaei";
 import Image from "next/image";
 
 export default function About() {
@@ -25,6 +28,9 @@ export default function About() {
       </section>
 
       <AdvanceSection />
+      <AboutSiae />
+      <SIAEIPage />
+      <SeminarSection />
     </div>
   );
 }
