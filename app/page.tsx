@@ -1,7 +1,7 @@
 import Coporate from "@/components/Coporate";
 import Header from "@/components/Header";
 import Membership from "@/components/Membership";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
