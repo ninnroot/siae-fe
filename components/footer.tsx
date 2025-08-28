@@ -46,7 +46,7 @@ export function Footer() {
             </div>
 
             {/* QR Code and Social Media */}
-            <div className="bg-amber-50 p-4 rounded-lg w-1/2">
+            <div className="bg-amber-50 p-4 rounded-lg w-full md:w-1/2">
               <div className="flex items-center space-x-4">
                 <div className="relative">
                   {/* QR Code Placeholder */}
