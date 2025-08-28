@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Mail , MapPin } from "lucide-react";
+import Link from "next/link";
 
 const ContactUs =() =>{
     return(
@@ -19,9 +20,9 @@ const ContactUs =() =>{
                     <p className ="text-[var(--color-primary)] font-bold space-x-3 mb-1">
                         Chat to us
                     </p>
-                    <p className="text-[var(--color-text-paragraph)] leading-relaxed mb-10 text-lg" >
+                    <Link  href ="#" className="text-[var(--color-text-paragraph)] leading-relaxed mb-10 text-lg" >
                         aero@siae.sg
-                    </p>
+                    </Link>
                     </div>
 
                 </div>
