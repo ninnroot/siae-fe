@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Mail , MapPin } from "lucide-react";
-import ContactUsFill from "./contact-us-form";
+
 const ContactUs =() =>{
     return(
         <section className = "py-16 bg-white flex justify-center">

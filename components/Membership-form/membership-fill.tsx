@@ -5,6 +5,13 @@ import { nationalities } from "@/config/nationalities";
 import { DatePicker } from "../ui/date-picker";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 const MemberShipFill = () => {
   const [formData, setFormData] = useState({
@@ -81,6 +88,7 @@ const MemberShipFill = () => {
               value={formData.email}
               onChange={(e) => handleInputChange("email", e.target.value)}
               className="h-12 bg-white"
+              placeholder="Enter your Email Address"
             />
           </div>
 
@@ -88,6 +96,7 @@ const MemberShipFill = () => {
             <label
               htmlFor="memberShipNum"
               className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
+
             >
               Membership Number (Legacy)
             </label>
@@ -95,6 +104,7 @@ const MemberShipFill = () => {
               id="memberShipNum"
               type="number"
               value={formData.memberShipNum}
+              placeholder="Enter your MemberShip Number"
               onChange={(e) =>
                 handleInputChange("memberShipNum", e.target.value)
               }
@@ -102,44 +112,51 @@ const MemberShipFill = () => {
             />
           </div>
 
-          <div className="w-full mb-5">
-            <label
-              htmlFor="salutation"
-              className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
-            >
-              Salutation
-            </label>
-            <select
-              id="salutation"
-              value={formData.salutation}
-              onChange={(e) => handleInputChange("salutation", e.target.value)}
-              className="w-full border bg-white border-gray-300 rounded-md px-3 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
-            >
-              <option value="Mr">Mr</option>
-              <option value="Mrs">Mrs</option>
-            </select>
-          </div>
+            <div className="w-full mb-5">
+              <label
+                htmlFor="salutation"
+                className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
+              >
+                Salutation
+              </label>
 
+              <Select
+                value={formData.salutation}
+                onValueChange={(value) => handleInputChange("salutation", value)}
+              >
+                <SelectTrigger className="w-full bg-white h-12 ">
+                  <SelectValue placeholder="Select salutation" />
+                </SelectTrigger>
+                <SelectContent className = "text-[var(--color-text-label)]">
+                  <SelectItem value="Mr">Mr</SelectItem>
+                  <SelectItem value="Mrs">Mrs</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
           <div className="w-full mb-5">
-            <label
-              htmlFor="nationality"
-              className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
-            >
-              Nationality
-            </label>
-            <select
-              id="nationality"
-              value={formData.nationality}
-              onChange={(e) => handleInputChange("nationality", e.target.value)}
-              className="w-full border bg-white border-gray-300 rounded-md px-3 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
-            >
-              {nationalities.map((n) => (
-                <option key={n.code} value={n.code}>
-                  {n.nationality}
-                </option>
-              ))}
-            </select>
-          </div>
+              <label
+                htmlFor="nationality"
+                className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
+              >
+                Nationality
+              </label>
+
+              <Select
+                value={formData.nationality}
+                onValueChange={(value) => handleInputChange("nationality", value)}
+              >
+                <SelectTrigger className="w-full border bg-white ">
+                  <SelectValue placeholder="Select nationality" />
+                </SelectTrigger>
+                <SelectContent  className = "text-[var(--color-text-label)]">
+                  {nationalities.map((n) => (
+                    <SelectItem key={n.code} value={n.code}>
+                      {n.nationality}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
 
           {/* Date of Birth */}
           <div className="w-full mb-5">

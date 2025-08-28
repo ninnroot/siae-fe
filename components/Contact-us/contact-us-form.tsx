@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
-
+import { Textarea } from "../ui/textarea";
+import { Label } from "../ui/label";
 const ContactUsFill = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -27,12 +28,12 @@ const ContactUsFill = () => {
         {/* Name */}
         <div className="flex gap-6 mb-6">
           <div className="w-full">
-            <label
+            <Label
               htmlFor="name"
               className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
             >
               Name
-            </label>
+            </Label>
             <Input
               id="name"
               value={formData.name}
@@ -46,12 +47,12 @@ const ContactUsFill = () => {
         {/* Email */}
         <div className="flex-col flex gap-2 mb-6">
           <div className="w-full">
-            <label
+            <Label
               htmlFor="email"
               className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
             >
               Email
-            </label>
+            </Label>
             <Input
               id="email"
               type="email"
@@ -66,13 +67,13 @@ const ContactUsFill = () => {
         {/* Message */}
         <div className="flex-col flex gap-2 mb-6">
           <div className="w-full">
-            <label
+            <Label
               htmlFor="message"
               className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
             >
               Message
-            </label>
-            <textarea
+            </Label>
+            <Textarea
               id="message"
               value={formData.message}
               onChange={(e) => handleInputChange("message", e.target.value)}
