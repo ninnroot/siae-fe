@@ -32,7 +32,8 @@ const ContactUs =() =>{
                         Office
                     </p>
                     <p className="text-[var(--color-text-paragraph)] leading-relaxed mb-10 text-lg" >
-                        60 Paya Lebar Road #07-54 Paya Lebar Square Singapore 409051
+                        60 Paya Lebar Road #07-54 <br/>
+                         Paya Lebar Square Singapore 409051
                     </p>
                     </div>
                   
