@@ -11,7 +11,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
 const MemberShipFill = () => {
   const [formData, setFormData] = useState({
@@ -29,20 +29,20 @@ const MemberShipFill = () => {
   };
 
   return (
-    <section className="bg-white py-5 flex justify-center mb-5">
-      <fieldset className="bg-[var(--color-bg-fieldset)] max-w-4xl w-full px-8 py-10 rounded-lg shadow-md">
-        <h3 className="text-2xl text-[var(--color-primary)] font-bold mb-8 mt-3">
+    <section className="bg-white py-8 sm:py-10 flex justify-center px-4 sm:px-6">
+      <fieldset className="bg-[var(--color-bg-fieldset)] max-w-4xl w-full px-6 sm:px-8 md:px-10 py-8 sm:py-10 rounded-lg shadow-md">
+        <h3 className="text-2xl sm:text-3xl text-[var(--color-primary)] font-bold mb-6 sm:mb-8">
           Get in Touch
         </h3>
-        <p className="text-[var(--color-text-paragraph)] leading-6 mb-10">
+        <p className="text-[var(--color-text-paragraph)] leading-6 mb-8 sm:mb-10 text-base sm:text-lg">
           Do leave us a note below and we will get back to you real soon
         </p>
 
         {/* First Name + Last Name */}
-        <div className="flex gap-6 mb-5">
-          <div className="w-1/2">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-5">
+          <div className="w-full sm:w-1/2">
             <label
-              htmlFor="firstname"
+              htmlFor="firstName"
               className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
             >
               First name
@@ -51,124 +51,121 @@ const MemberShipFill = () => {
               id="firstName"
               value={formData.firstName}
               placeholder="Enter your first name"
-              className="h-12 bg-white"
+              className="h-12 sm:h-14 bg-white"
               onChange={(e) => handleInputChange("firstName", e.target.value)}
             />
           </div>
 
-          <div className="w-1/2">
+          <div className="w-full sm:w-1/2">
             <label
-              htmlFor="lastname"
+              htmlFor="lastName"
               className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
             >
               Last name
             </label>
             <Input
-              id="lastname"
+              id="lastName"
               value={formData.lastName}
               placeholder="Enter your last name"
+              className="h-12 sm:h-14 bg-white"
               onChange={(e) => handleInputChange("lastName", e.target.value)}
-              className="h-12 bg-white"
             />
           </div>
         </div>
 
-        {/* Email + Membership Number + Salutation + Nationality */}
-        <div className="flex-col flex gap-4">
-          <div className="w-full mb-5">
-            <label
-              htmlFor="email"
-              className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
-            >
-              Email
-            </label>
-            <Input
-              id="email"
-              type="email"
-              value={formData.email}
-              onChange={(e) => handleInputChange("email", e.target.value)}
-              className="h-12 bg-white"
-              placeholder="Enter your Email Address"
-            />
-          </div>
+        {/* Email */}
+        <div className="w-full mb-5">
+          <label
+            htmlFor="email"
+            className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
+          >
+            Email
+          </label>
+          <Input
+            id="email"
+            type="email"
+            value={formData.email}
+            placeholder="Enter your Email Address"
+            className="h-12 sm:h-14 bg-white"
+            onChange={(e) => handleInputChange("email", e.target.value)}
+          />
+        </div>
 
-          <div className="w-full mb-5">
-            <label
-              htmlFor="memberShipNum"
-              className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
+        {/* Membership Number */}
+        <div className="w-full mb-5">
+          <label
+            htmlFor="memberShipNum"
+            className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
+          >
+            Membership Number (Legacy)
+          </label>
+          <Input
+            id="memberShipNum"
+            type="number"
+            value={formData.memberShipNum}
+            placeholder="Enter your MemberShip Number"
+            className="h-12 sm:h-14 bg-white"
+            onChange={(e) => handleInputChange("memberShipNum", e.target.value)}
+          />
+        </div>
 
-            >
-              Membership Number (Legacy)
-            </label>
-            <Input
-              id="memberShipNum"
-              type="number"
-              value={formData.memberShipNum}
-              placeholder="Enter your MemberShip Number"
-              onChange={(e) =>
-                handleInputChange("memberShipNum", e.target.value)
-              }
-              className="h-12 bg-white"
-            />
-          </div>
+        {/* Salutation */}
+        <div className="w-full mb-5">
+          <label
+            htmlFor="salutation"
+            className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
+          >
+            Salutation
+          </label>
+          <Select
+            value={formData.salutation}
+            onValueChange={(value) => handleInputChange("salutation", value)}
+          >
+            <SelectTrigger className="w-full h-12 sm:h-14 bg-white">
+              <SelectValue placeholder="Select salutation" />
+            </SelectTrigger>
+            <SelectContent className="text-[var(--color-text-label)]">
+              <SelectItem value="Mr">Mr</SelectItem>
+              <SelectItem value="Mrs">Mrs</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
 
-            <div className="w-full mb-5">
-              <label
-                htmlFor="salutation"
-                className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
-              >
-                Salutation
-              </label>
+        {/* Nationality */}
+        <div className="w-full mb-5">
+          <label
+            htmlFor="nationality"
+            className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
+          >
+            Nationality
+          </label>
+          <Select
+            value={formData.nationality}
+            onValueChange={(value) => handleInputChange("nationality", value)}
+          >
+            <SelectTrigger className="w-full h-12 sm:h-14 bg-white">
+              <SelectValue placeholder="Select nationality" />
+            </SelectTrigger>
+            <SelectContent className="text-[var(--color-text-label)]">
+              {nationalities.map((n) => (
+                <SelectItem key={n.code} value={n.code}>
+                  {n.nationality}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
 
-              <Select
-                value={formData.salutation}
-                onValueChange={(value) => handleInputChange("salutation", value)}
-              >
-                <SelectTrigger className="w-full bg-white h-12 ">
-                  <SelectValue placeholder="Select salutation" />
-                </SelectTrigger>
-                <SelectContent className = "text-[var(--color-text-label)]">
-                  <SelectItem value="Mr">Mr</SelectItem>
-                  <SelectItem value="Mrs">Mrs</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          <div className="w-full mb-5">
-              <label
-                htmlFor="nationality"
-                className="block text-sm text-[var(--color-text-label)] font-medium mb-1"
-              >
-                Nationality
-              </label>
-
-              <Select
-                value={formData.nationality}
-                onValueChange={(value) => handleInputChange("nationality", value)}
-              >
-                <SelectTrigger className="w-full border bg-white ">
-                  <SelectValue placeholder="Select nationality" />
-                </SelectTrigger>
-                <SelectContent  className = "text-[var(--color-text-label)]">
-                  {nationalities.map((n) => (
-                    <SelectItem key={n.code} value={n.code}>
-                      {n.nationality}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-          {/* Date of Birth */}
-          <div className="w-full mb-5">
-            <DatePicker
-              value={formData.dob}
-              onChange={(val) => handleInputChange("dob", val)}
-            />
-          </div>
+        {/* Date of Birth */}
+        <div className="w-full mb-5">
+          <DatePicker
+            value={formData.dob}
+            onChange={(val) => handleInputChange("dob", val)}
+          />
         </div>
 
         {/* Info Text */}
-        <div className="text-[var(--color-text-label)] leading-relaxed mb-5">
+        <div className="text-[var(--color-text-label)] leading-relaxed mb-5 text-sm sm:text-base">
           <p>
             You're about to make a secure payment. All transactions are encrypted
             and your information is protected. You can make payment with payment
@@ -176,23 +173,46 @@ const MemberShipFill = () => {
           </p>
         </div>
 
-        {/* Payment Icons */}
-        <div className="flex gap-10 mb-5 items-center justify-center">
-          <Image src="/payment-icons/visa.png" alt="Visa" width={100} height={100} className="h-10 w-auto" />
-          <Image src="/payment-icons/circles.png" alt="Circles" width={100} height={100} className="h-10 w-auto" />
-          <Image src="/payment-icons/discover.png" alt="Discover" width={150} height={100} className="h-8" />
-          <Image src="/payment-icons/amex.png" alt="Amex" width={100} height={100} className="h-10 w-auto" />
-        </div>
+            {/* Payment Icons */}
+          <div className="flex gap-6 sm:gap-10 mb-6 items-center justify-center overflow-x-auto scrollbar-hide">
+            <Image
+              src="/payment-icons/visa.png"
+              alt="Visa"
+              width={100}
+              height={100}
+              className="h-6 w-auto sm:h-8 md:h-10"
+            />
+            <Image
+              src="/payment-icons/circles.png"
+              alt="Circles"
+              width={100}
+              height={100}
+              className="h-6 w-auto sm:h-8 md:h-10"
+            />
+            <Image
+              src="/payment-icons/discover.png"
+              alt="Discover"
+              width={100}
+              height={100}
+              className="h-5 w-auto sm:h-7 md:h-8 "
+            />
+            <Image
+              src="/payment-icons/amex.png"
+              alt="Amex"
+              width={100}
+              height={100}
+              className="h-6 w-auto sm:h-8 md:h-10"
+            />
+          </div>
+
 
         {/* Proceed Button */}
-        <div className="mb-12">
-          <Button className="w-full bg-[var(--color-primary)] text-white py-3 text-lg">
+        <div className="mb-8 sm:mb-12">
+          <Button className="w-full bg-[var(--color-primary)] text-white py-3 text-base sm:text-lg">
             Proceed to Payment
           </Button>
         </div>
-      
       </fieldset>
-      
     </section>
   );
 };
