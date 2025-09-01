@@ -1,5 +1,5 @@
 "use client";
-import AboutSiae from "@/components/About/about-siae";
+import AboutSIAE from "@/components/About/about-siae";
 import AdvanceSection from "@/components/About/advance-section";
 import SeminarSection from "@/components/About/seminar";
 import SIAEIPage from "@/components/About/siaei";
@@ -28,7 +28,7 @@ export default function About() {
       </section>
 
       <AdvanceSection />
-      <AboutSiae />
+      <AboutSIAE />
       <SIAEIPage />
       <SeminarSection />
     </div>

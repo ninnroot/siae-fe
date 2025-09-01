@@ -1,10 +1,4 @@
 "use client";
-import Image from "next/image";
-import { Topbar } from "@/components/topbar";
-import { Footer } from "@/components/footer";
-import OurTeam from "@/components/ourteam";
-
-
 import {
   HeroSection,
   WelcomeSection,
@@ -15,15 +9,9 @@ import {
   CorporateMembersSection,
 } from "@/components/home";
 
-
 export default function Home() {
   return (
     <div className="font-sans min-h-screen">
-
-     
-      <OurTeam />
-    
-
       <HeroSection />
       <WelcomeSection />
       <LeadershipSection />
@@ -31,7 +19,6 @@ export default function Home() {
       <EventsSection />
       <BlogSection />
       <CorporateMembersSection />
-
     </div>
   );
 }
