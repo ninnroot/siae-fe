@@ -120,7 +120,7 @@ export default function AdvanceSection() {
           </div>
 
           <div
-            className="flex items-end justify-center md:items-start md:justify-end p-4 md:p-0 lg:hidden"
+            className="flex items-end justify-center md:items-start p-4 md:p-0 lg:hidden"
             style={{ zIndex: 2 }}
           >
             <div className="bg-white/95 backdrop-blur-sm p-4 md:p-6 lg:p-8 rounded-2xl w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl shadow-xl mb-4 md:mt-10">

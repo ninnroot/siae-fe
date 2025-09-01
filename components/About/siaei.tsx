@@ -15,7 +15,7 @@ export default function SIAEIPage() {
             </h1>
 
             <div className="max-w-4xl mx-auto">
-              <p className="text-gray-700 leading-relaxed text-lg text-justify">
+              <p className="text-gray-700 leading-relaxed text-md md:text-lg text-center">
                 The Singapore Institute of Aerospace Engineers (SIAE) is proud
                 to establish SIAEInternational (SIAEi) – a strategic initiative
                 to extend our reach and better serve the growing community of

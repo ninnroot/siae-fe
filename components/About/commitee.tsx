@@ -166,7 +166,7 @@ export default function CommitteePage() {
         </div>
 
         {/* Middle Level - Honorary Positions */}
-        <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-30 mb-12">
+        <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-20 mb-12">
           {middleMembers.map((member, index) => (
             <div key={index} className="text-center">
               <Avatar className="w-full max-w-60 h-60 md:w-50 md:h-50 mx-auto mb-4 border-4 border-white shadow-lg">
@@ -241,7 +241,7 @@ export default function CommitteePage() {
                     <AvatarImage
                       src={member.image || "/placeholder.svg"}
                       alt={member.name}
-                      className="object-contain w-100 h-100"
+                      className="w-full object-cover h-100"
                     />
                     <AvatarFallback className="text-2xl font-bold rounded-none h-64">
                       {member.name

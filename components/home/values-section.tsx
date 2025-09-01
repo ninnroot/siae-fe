@@ -3,9 +3,9 @@ import { CheckCircle } from "lucide-react";
 
 export function ValuesSection() {
   return (
-    <section className="relative min-h-[100vh] flex flex-col px-4 sm:px-6 lg:px-40 lg:mx-20 py-16 gap-10">
+    <section className="relative min-h-[100vh] flex flex-col px-4 sm:px-6 xl:px-40 lg:mx-20 py-16 gap-10">
       {/* Original Values Section (Hidden on large screens) */}
-      <div className="hidden grid-cols-1 lg:grid-cols-2 gap-16 items-center justify-center lg:px-60 lg:grid md:grid">
+      <div className="hidden grid-cols-1 lg:grid-cols-2 gap-16 items-center justify-center lg:px-40 xl:px-44 lg:grid md:grid">
         <div className="w-full h-[250px] text-center bg-gray-100 p-4 rounded-lg">
           <div className="flex items-center justify-center">
             <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-4">
@@ -13,7 +13,7 @@ export function ValuesSection() {
             </div>
           </div>
           <p className="text-2xl font-bold text-blue-900">Respect</p>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-lg">
+          <p className="text-gray-600 leading-relaxed text-sm md:text-lg lg:text-sm xl:text-md">
             We show consideration in our words and deeds to aerospace
             professionals, aviation enthusiasts, occasions and places.
           </p>
@@ -25,7 +25,7 @@ export function ValuesSection() {
             </div>
           </div>
           <p className="text-2xl font-bold text-blue-900">Responsibility</p>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-lg">
+          <p className="text-gray-600 leading-relaxed text-sm md:text-lg lg:text-sm xl:text-md">
             We give our best in all that we do and account for our decisions as
             aviation professionals.
           </p>
@@ -39,7 +39,7 @@ export function ValuesSection() {
             </div>
           </div>
           <p className="text-2xl font-bold text-blue-900">Integrity</p>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-lg">
+          <p className="text-gray-600 leading-relaxed text-sm md:text-lg lg:text-sm xl:text-md">
             We do what is right, stand up for what is right and treat all SIAE
             members with the same standards.
           </p>
@@ -57,13 +57,13 @@ export function ValuesSection() {
             </div>
           </div>
           <p className="text-2xl font-bold text-blue-900">Teamwork</p>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-lg">
+          <p className="text-gray-600 leading-relaxed text-sm md:text-lg lg:text-sm xl:text-md">
             We work well with others and believe all tasks should be done in
             cooperation or partnership.
           </p>
         </div>
       </div>
-      <div className="hidden grid-cols-1 lg:grid-cols-2 gap-16 items-center justify-center lg:px-60 lg:grid md:grid">
+      <div className="hidden grid-cols-1 lg:grid-cols-2 gap-16 items-center justify-center lg:px-40 xl:px-44 lg:grid md:grid lg:mt-16">
         <div className="w-full h-[250px] text-center bg-gray-100 p-4 rounded-lg">
           <div className="flex items-center justify-center">
             <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-4">
@@ -71,7 +71,7 @@ export function ValuesSection() {
             </div>
           </div>
           <p className="text-2xl font-bold text-blue-900">Loyalty</p>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-lg">
+          <p className="text-gray-600 leading-relaxed text-sm md:text-lg lg:text-sm xl:text-md">
             We are committed to SIAE and the aviation community.
           </p>
         </div>
@@ -82,7 +82,7 @@ export function ValuesSection() {
             </div>
           </div>
           <p className="text-2xl font-bold text-blue-900">Resilience</p>
-          <p className="text-gray-600 leading-relaxed text-sm md:text-lg">
+          <p className="text-gray-600 leading-relaxed text-sm md:text-lg lg:text-sm xl:text-md">
             We persevere in the face of challenges and will aim to complete
             objectives despite difficulties.
           </p>

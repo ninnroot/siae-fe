@@ -14,7 +14,7 @@ const SeminarSection = () => {
               alt="Environmentally Sustainable Aerospace"
               width={600}
               height={600}
-              className="rounded-lg"
+              className="rounded-lg md:w-full lg:w-600"
             />
 
             {/* Right Side - What We Offer Text Block */}
@@ -93,7 +93,7 @@ const SeminarSection = () => {
               alt="Environmentally Sustainable Aerospace"
               width={600}
               height={600}
-              className="rounded-lg"
+              className="rounded-lg md:w-full lg:w-600"
             />
           </div>
         </div>

@@ -77,7 +77,7 @@ const posts = [
 
 const IncomingEvent = () => {
   return (
-    <div className='p-5 lg:max-w-6xl lg:mx-auto'>
+    <div className='p-5 lg:max-w-6xl lg:mx-auto mt-32'>
         <div className='flex items-cener justify-between mb-5'>
             <h2 className='text-2xl md:text-4xl font-bold text-[#090056] mb-4'>Incoming Events</h2>
             <DropdownMenu>
