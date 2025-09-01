@@ -49,7 +49,7 @@ export function Topbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-8">
             <Link href="/" className={getNavLinkClass("/")}>
               Home
             </Link>
@@ -111,7 +111,7 @@ export function Topbar() {
           </nav>
 
           {/* Desktop Right Section */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden xl:flex items-center space-x-4">
             <Button className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-md">
               Contact Us
             </Button>
@@ -124,7 +124,7 @@ export function Topbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               type="button"
               onClick={toggleMobileMenu}
@@ -141,7 +141,7 @@ export function Topbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
+          <div className="xl:hidden border-t border-gray-200 py-4">
             <nav className="flex flex-col space-y-4">
               <Link href="/" className={getNavLinkClass("/")} onClick={handleNavClick}>
                 Home
