@@ -1,7 +1,8 @@
+
 import React from "react";
 import { Button } from "../ui/button";
 import { ArrowUpRight } from "lucide-react";
-
+import Link from "next/link";
 const Membership = () => {
   const memberDatas = [
     {
@@ -75,6 +76,7 @@ const Membership = () => {
                     <b className="text-[#090056]">{memberData.price}</b>
                   </p>
                 </div>
+
                 <Button
                   variant="ghost"
                   className="text-md font-[400] hidden md:flex"
@@ -88,10 +90,16 @@ const Membership = () => {
                   <li>{list}</li>
                 ))}
               </ul>
-              <Button className="text-md font-[400] bg-[#090056] w-1/2 mx-auto md:hidden flex mt-5">
-                <span>Apply</span>
+
+              <Button
+                asChild
+                className="text-md font-[400] bg-[#090056] w-1/2 mx-auto md:hidden flex mt-5">
+                <Link href="/membership-form">
+                Applied
                 <ArrowUpRight className="w-5" />
+              </Link>
               </Button>
+
             </div>
             {memberDatas.length > index + 1 && (
               <div className="w-full h-[1px] bg-[#e2e2e3]"></div>

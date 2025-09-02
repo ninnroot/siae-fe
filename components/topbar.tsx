@@ -107,9 +107,13 @@ export function Topbar() {
 
           {/* Desktop Right Section */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-md">
+            <Link href="/contact-us" className = {getNavLinkClass("/contact-us")}>
+              <Button className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-md">
               Contact Us
             </Button>
+            </Link>
+      
+
             <button
               type="button"
               className="p-2 text-gray-600 hover:text-gray-800 transition-colors"
@@ -209,9 +213,12 @@ export function Topbar() {
               </Link>
 
               <div className="pt-4 border-t border-gray-200">
+                <Link href= "/contact-us" className={getNavLinkClass("/contact-us")}>
                 <Button className="w-full bg-blue-900 hover:bg-blue-800 text-white py-2 rounded-md">
                   Contact Us
                 </Button>
+                </Link>
+              
               </div>
 
               <button

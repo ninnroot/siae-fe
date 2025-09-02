@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
 const Coporate = () => {
   return (
     <div className="mx-6 sm:px-12 md:max-w-6xl md:mx-auto py-12 md:py-20">
@@ -16,7 +16,7 @@ const Coporate = () => {
           capabilities
         </p>
         <div className="flex mx-auto flex-wrap items-center gap-2 md:flex-row">
-          <Button className="bg-[#090056] px-10 py-5">Apply</Button>
+          <Link href= "/membership-form"><Button className="bg-[#090056] px-10 py-5">Apply</Button></Link>
         </div>
       </div>
       <div className="flex flex-col md:flex-row md:gap-16 leading-8 pt-10">
