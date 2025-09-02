@@ -5,11 +5,11 @@ import FormHeader from "@/components/Membership-form/membership-form-header";
 
 export default function MembershipFormPage(){
     return (
-        <>
+        <div>
         <FormHeader />
         <MemberShipFill />
         <MemberShipFooter />
 
-        </>
+        </div>
     )
 }
