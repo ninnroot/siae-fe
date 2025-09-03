@@ -3,7 +3,7 @@ import { Target, Lightbulb } from "lucide-react";
 
 export function LeadershipSection() {
   return (
-    <section className="relative min-h-[100vh] flex flex-col px-4 sm:px-6 lg:px-40 lg:mx-20 py-16">
+    <section className="relative min-h-[100vh] flex flex-col px-4 sm:px-6 xl:px-40 lg:mx-20 py-16">
       <h1 className="text-4xl font-bold text-left mb-16 text-blue-900">
         50+ Years of Leadership
       </h1>
@@ -13,7 +13,7 @@ export function LeadershipSection() {
           {/* Top Image - Horizontal */}
           <div className="relative">
             <div
-              className="h-[400px] w-[400px] rounded-lg"
+              className="h-[400px] w-full lg:w-[400px] rounded-lg"
               style={{
                 backgroundImage: "url(mission.jpg)",
                 backgroundSize: "cover",
@@ -81,7 +81,7 @@ export function LeadershipSection() {
           <div className="relative lg:ml-16">
             <div className=" rounded-lg overflow-hidden relative">
               <div
-                className="h-[400px] w-[400px] rounded-lg"
+                className="h-[400px] w-full lg:w-[400px] rounded-lg"
                 style={{
                   backgroundImage: "url(vision.jpg)",
                   backgroundSize: "cover",

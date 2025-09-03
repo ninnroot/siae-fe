@@ -34,6 +34,11 @@ export function Topbar() {
     return `${baseClass} text-blue-900 hover:text-blue-700`;
   };
 
+  const handleNavClick = () => {
+    setIsMobileMenuOpen(false);
+    setIsAboutDropdownOpen(false);
+  };
+
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +49,7 @@ export function Topbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden xl:flex items-center space-x-8">
             <Link href="/" className={getNavLinkClass("/")}>
               Home
             </Link>
@@ -106,6 +111,7 @@ export function Topbar() {
           </nav>
 
           {/* Desktop Right Section */}
+
           <div className="hidden lg:flex items-center space-x-4">
             <Link href="/contact-us" className = {getNavLinkClass("/contact-us")}>
               <Button className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2 rounded-md">
@@ -123,7 +129,7 @@ export function Topbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button
               type="button"
               onClick={toggleMobileMenu}
@@ -140,9 +146,9 @@ export function Topbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
+          <div className="xl:hidden border-t border-gray-200 py-4">
             <nav className="flex flex-col space-y-4">
-              <Link href="/" className={getNavLinkClass("/")}>
+              <Link href="/" className={getNavLinkClass("/")} onClick={handleNavClick}>
                 Home
               </Link>
 
@@ -168,18 +174,21 @@ export function Topbar() {
                     <Link
                       href="/about"
                       className="block text-sm text-gray-700 hover:text-blue-700 py-1"
+                      onClick={handleNavClick}
                     >
                       Our Mission
                     </Link>
                     <Link
                       href="/about"
                       className="block text-sm text-gray-700 hover:text-blue-700 py-1"
+                      onClick={handleNavClick}
                     >
                       Leadership
                     </Link>
                     <Link
                       href="/about"
                       className="block text-sm text-gray-700 hover:text-blue-700 py-1"
+                      onClick={handleNavClick}
                     >
                       History
                     </Link>
@@ -190,25 +199,28 @@ export function Topbar() {
               <Link
                 href="/membership"
                 className={getNavLinkClass("/membership")}
+                onClick={handleNavClick}
               >
                 Membership
               </Link>
-              <Link href="/events" className={getNavLinkClass("/events")}>
+              <Link href="/events" className={getNavLinkClass("/events")} onClick={handleNavClick}>
                 Events
               </Link>
               <Link
                 href="/merchandise"
                 className={getNavLinkClass("/merchandise")}
+                onClick={handleNavClick}
               >
                 Merchandise
               </Link>
               <Link
                 href="/professional-services"
                 className={getNavLinkClass("/professional-services")}
+                onClick={handleNavClick}
               >
                 Professional Services
               </Link>
-              <Link href="/blogs" className={getNavLinkClass("/blogs")}>
+              <Link href="/blogs" className={getNavLinkClass("/blogs")} onClick={handleNavClick}>
                 Blogs
               </Link>
 
